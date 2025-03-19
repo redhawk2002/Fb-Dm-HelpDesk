@@ -1,0 +1,32 @@
+{
+  "name": "fb-dm-helpdesk",
+  "version": "1.0.0",
+  "description": "Effortless communication between business owners and clients, enabling seamless messaging and support within a unified platform.",
+  "homepage": "https://github.com/redhawk2002/Fb-Dm-HelpDesk#readme",
+  "bugs": {
+    "url": "https://github.com/redhawk2002/Fb-Dm-HelpDesk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redhawk2002/Fb-Dm-HelpDesk.git"
+  },
+  "license": "MIT",
+  "author": "Sandeepan Kalita",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "axios": "^1.8.3",
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.12.1",
+    "nodemon": "^3.1.9"
+  }
+}
