@@ -7,6 +7,8 @@ const cors = require("cors");
 const userRoute = require("./routes/userRoute");
 const subUserRoute = require("./routes/subUserRoute");
 const facebookRoute = require("./routes/facebookRoute");
+const webhookRoutes = require("./routes/webhookRoutes");
+const conversationRoutes = require("./routes/conversationRoutes");
 // Initialize express app and connect to the database
 const app = express();
 const port = config.port;
@@ -20,6 +22,8 @@ app.use(cors());
 app.use("/api/v1", userRoute);
 app.use("/api/v1", subUserRoute);
 app.use("/api/v1", facebookRoute);
+app.use("/api/v1/webhook", webhookRoutes);
+app.use("/api/v1", conversationRoutes);
 
 app.get("/", (req, res) => {
   res.send("Welcome to the Facebook API server");

@@ -4,7 +4,6 @@ const {
   login,
   logout,
   getUser,
-  createSubUser,
 } = require("../controllers/userController");
 const authMiddleware = require("../middlewares/authMiddleware");
 
