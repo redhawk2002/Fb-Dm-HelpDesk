@@ -13,11 +13,16 @@ const conversationRoutes = require("./routes/conversationRoutes");
 const app = express();
 const port = config.port;
 connectDB();
-
+const allowedOrigin = "http://localhost:5173";
 // Middleware setup
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(
+  cors({
+    origin: allowedOrigin,
+    credentials: true, // Allow credentials (cookies) to be sent
+  })
+);
 
 app.use("/api/v1", userRoute);
 app.use("/api/v1", subUserRoute);
